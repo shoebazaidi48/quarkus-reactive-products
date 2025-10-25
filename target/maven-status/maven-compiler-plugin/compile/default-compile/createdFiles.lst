@@ -1,0 +1,10 @@
+com/example/products/messaging/NotificationProducer.class
+com/example/products/messaging/NotificationConsumer.class
+com/example/products/rest/ProductResource.class
+com/example/products/messaging/ProductProducer.class
+com/example/products/messaging/IMessageProcessor.class
+com/example/products/model/Product.class
+com/example/products/model/Notification.class
+com/example/products/model/Notification$SomeBuilder.class
+com/example/products/messaging/ProductConsumer.class
+com/example/products/builder/NotificationBuilder.class

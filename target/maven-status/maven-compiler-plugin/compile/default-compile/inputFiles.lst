@@ -1,0 +1,10 @@
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/builder/NotificationBuilder.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/messaging/IMessageProcessor.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/messaging/NotificationConsumer.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/messaging/NotificationProducer.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/messaging/ProductConsumer.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/messaging/ProductProducer.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/messaging/ShoppingMessage.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/model/Notification.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/model/Product.java
+/Users/shoebzaidi/Documents/GitHub/quarkus-reactive-products/src/main/java/com/example/products/rest/ProductResource.java
