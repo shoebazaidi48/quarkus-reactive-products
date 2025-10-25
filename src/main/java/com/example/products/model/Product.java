@@ -1,11 +1,10 @@
 package com.example.products.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.quarkus.runtime.annotations.RegisterForReflection;
+import io.vertx.core.json.JsonObject;
 
 @RegisterForReflection
-public class Product {
+public class Product extends JsonObject {
     private String id;
     private String name;
     private String category;
@@ -13,18 +12,6 @@ public class Product {
 
     public Product() {}
 
-//    @JsonCreator
-//    public Product(@JsonProperty("id") String id,
-//                   @JsonProperty("name") String name,
-//                   @JsonProperty("category") String category,
-//                   @JsonProperty("price") double price) {
-//        this.id = id;
-//        this.name = name;
-//        this.category = category;
-//        this.price = price;
-//    }
-
-////    @JsonCreator
     public Product(String id,
                    String name,
                    String category,

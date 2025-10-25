@@ -17,8 +17,8 @@ public class NotificationConsumer implements IMessageProcessor{
     @Override
     @Incoming("notifications-in")
     public Uni<Void> processIncomingMessage(Message<JsonObject> message) {
-        JsonObject jsonObject = message.getPayload();
-        Notification notification = jsonObject.mapTo(Notification.class);
+        JsonObject notificationJsonObject = message.getPayload();
+        Notification notification = notificationJsonObject.mapTo(Notification.class);
         LOG.infov("Consumed notification: {0}", notification);
         return Uni.createFrom().nullItem();
     }

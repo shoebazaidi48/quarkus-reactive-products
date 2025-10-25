@@ -2,13 +2,11 @@ package com.example.products.messaging;
 
 import com.example.products.model.Product;
 import io.smallrye.mutiny.Uni;
-import io.vertx.core.json.JsonObject;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.reactive.messaging.Incoming;
 import org.eclipse.microprofile.reactive.messaging.Message;
 import org.jboss.logging.Logger;
 
-import java.util.concurrent.CompletionStage;
 
 @ApplicationScoped
 public class ProductConsumer {
@@ -31,10 +29,13 @@ public class ProductConsumer {
 //    }
 
     @Incoming("products-in")
-    public Uni<Void> process(Message<JsonObject> product) {
-        JsonObject jsonObject = product.getPayload();
-        Product product1 = jsonObject.mapTo(Product.class);
-        LOG.infov("Consumed: {0}", product1);
+    public Uni<Void> process(Message<Product> product) {
+        // JsonObject jsonObject = product.getPayload();
+        // Product product1 = jsonObject.mapTo(Product.class);
+
+        Product productFromPayload = product.getPayload();
+
+        LOG.infov("Consumed: {0}", productFromPayload);
         // Do useful work here (persist, call downstream, etc.)
         return Uni.createFrom().nullItem();
     }

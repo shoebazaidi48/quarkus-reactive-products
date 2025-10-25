@@ -11,9 +11,15 @@ import org.eclipse.microprofile.reactive.messaging.Outgoing;
 @ApplicationScoped
 public interface IMessageProcessor {
 
+    // @Incoming("incoming-message")
+    // public Uni<Void> processIncomingMessage(Message<JsonObject> message);
+
+    // @Outgoing("outgoing-message")
+    // public Multi<Message<JsonObject>> produceNotification();
+
     @Incoming("incoming-message")
-    public Uni<Void> processIncomingMessage(Message<JsonObject> message);
+    Uni<Void> processIncomingMessage(Message<JsonObject> message);
 
     @Outgoing("outgoing-message")
-    public Multi<Message<JsonObject>> produceNotification();
+    Multi<Message<JsonObject>> produceNotification();
 }
