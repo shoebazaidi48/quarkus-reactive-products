@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  artemis:
+    image: vromero/activemq-artemis:latest
+    environment:
+      - ARTEMIS_USERNAME=admin
+      - ARTEMIS_PASSWORD=admin
+      - DISABLE_SECURITY=false
+      - ENABLE_JMX=true
+    ports:
+      - "8161:8161"   # Web console
+      - "61616:61616" # Core/JMS/OpenWire
+      - "5672:5672"   # AMQP 1.0
+    healthcheck:
+      test: ["CMD", "/opt/activemq-artemis/bin/artemis", "check", "--host", "localhost", "--port", "5672"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
