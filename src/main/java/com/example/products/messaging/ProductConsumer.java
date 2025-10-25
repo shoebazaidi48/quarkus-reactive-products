@@ -30,11 +30,7 @@ public class ProductConsumer {
 
     @Incoming("products-in")
     public Uni<Void> process(Message<Product> product) {
-        // JsonObject jsonObject = product.getPayload();
-        // Product product1 = jsonObject.mapTo(Product.class);
-
         Product productFromPayload = product.getPayload();
-
         LOG.infov("Consumed: {0}", productFromPayload);
         // Do useful work here (persist, call downstream, etc.)
         return Uni.createFrom().nullItem();
